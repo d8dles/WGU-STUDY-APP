@@ -1,6 +1,6 @@
 # WGU AWS Study Command Center
 
-A single-file browser study app for WGU Cloud + Network Engineering AWS study prep. It includes certification dashboards, flashcards, practice questions, quick labs, PBQ-style simulations, timed readiness checks, weak-area tracking, local progress tracking, confidence metrics, and JSON progress export.
+A single-file browser study app for WGU Cloud + Network Engineering AWS study prep. It includes certification dashboards, objective-tagged practice questions, quick labs, PBQ-style simulations, timed readiness checks, weak-area tracking, local progress tracking, confidence metrics, JSON progress export, and active spaced repetition for flashcards.
 
 ## Current Coverage
 
@@ -17,6 +17,19 @@ The app currently includes starter study sections for:
 - Linux Essentials
 - ITIL Foundation
 
+## What Works Now
+
+- Browser-only progress saving with `localStorage`
+- Spaced repetition for flashcards using Again / Hard / Good / Easy scheduling
+- Due-card count per certification
+- Timed readiness checks
+- Weak-area tracking by objective tag
+- Practice question scoring
+- Lab completion tracking
+- PBQ-style simulation checks
+- Official source bank with vendor/WGU links
+- JSON progress export
+
 ## Ownership, Use, and Disclaimers
 
 This is an original study tool created for personal learning and portfolio demonstration. It is not affiliated with, endorsed by, sponsored by, or approved by Western Governors University, CompTIA, Amazon Web Services, Linux Professional Institute, or PeopleCert.
@@ -25,14 +38,13 @@ This project does not contain exam dumps, real exam questions, protected exam co
 
 Progress is stored locally in the browser using `localStorage`. There is no backend, no account system, no cloud sync, no database, and no server-side user profile. Clearing browser data may erase saved progress.
 
-## Known Gaps Before Serious Use
+## Remaining Gaps
 
-- Official objective mapping still needs deeper verification against current vendor objective PDFs/exam guides.
-- Questions need source references, such as CompTIA domain numbers, AWS exam guide sections, or vendor documentation links.
-- Question volume is still prototype-level and not enough by itself for serious exam readiness.
-- Spaced repetition is not implemented yet.
-- Mobile polish should be tested across real devices.
-- The timed exam mode is a readiness drill, not a real exam simulator yet.
+- More question volume is still needed for each certification.
+- Objective tags are starter labels and should be expanded into precise vendor objective references.
+- Source references should eventually exist per individual question, not just per certification.
+- Timed readiness mode is not a full-length simulated exam yet.
+- Mobile polish should be tested on real devices.
 
 ## Run Locally
 
@@ -48,25 +60,8 @@ Import this repository into Vercel as a static/Other project. Use the repository
 
 Put `index.html` at the repository root, then enable Pages from the default branch and root folder.
 
-## How to Use
-
-1. Open the app.
-2. Select a certification from the sidebar.
-3. Use Overview, Practice, Timed Exam, Weak Areas, Flashcards, Labs, PBQ/Sims, and Sources.
-4. Progress saves automatically in the browser.
-5. Export progress as JSON from the Sources tab when needed.
-
-## Recommended Next Steps
-
-1. Verify every question against current official objectives.
-2. Add more questions per certification and per domain.
-3. Add source links/objective IDs to every question, flashcard, lab, and PBQ.
-4. Add spaced repetition for flashcards.
-5. Add domain-level readiness scoring.
-6. Add real mobile testing.
-
 ---
 
 **Last Updated**: July 8, 2026  
-**App Status**: Working static prototype with A+ restored  
+**App Status**: Working static prototype with SRS and A+ restored  
 **License**: All Rights Reserved
